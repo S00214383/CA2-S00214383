@@ -56,7 +56,12 @@ namespace CA2_S00214383
                 throw new NotImplementedException();
         }
 
-    
-        
+
+        public override string ToString()
+        {
+            return $"{Name }, {dateTime}";
+        }
+
+
     }
 }
