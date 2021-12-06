@@ -9,7 +9,17 @@
     <Grid>
         <Label x:Name="labl1" Content="Acitivity Planner" HorizontalAlignment="Left" Margin="145,42,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl2" Content="All Activities" HorizontalAlignment="Left" Margin="145,95,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBoxActivities" HorizontalAlignment="Left" Height="209" Margin="145,121,0,0" VerticalAlignment="Top" Width="221" SelectedIndex="6"/>
+        <ListBox x:Name="listBoxActivities" HorizontalAlignment="Left" Height="209" Margin="145,121,0,0" VerticalAlignment="Top" Width="221" SelectedIndex="6" SelectionChanged="listBoxActivities_SelectionChanged"/>
+        <TextBlock x:Name="tblkActivitiesDetails" HorizontalAlignment="Left" Margin="145,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="231"/>
+        <Label x:Name="lbldescription" Content="Selected Activities" HorizontalAlignment="Left" Margin="524,95,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDescription" Content="Description" HorizontalAlignment="Left" Margin="145,333,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddActivity" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="397,134,0,0" VerticalAlignment="Top" Width="75" Click="btnAddActivity_Click"/>
+        <ListBox x:Name="lbxActSelected" HorizontalAlignment="Left" Height="209" Margin="518,121,0,0" VerticalAlignment="Top" Width="193"/>
+        <Button x:Name="btnRemoveActivity" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="397,184,0,0" VerticalAlignment="Top" Width="75" Click="btnRemoveActivity_Click"/>
+        <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" Margin="53,142,0,0" VerticalAlignment="Top" Checked="rb_Checked" GroupName="rbGroup"/>
+        <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="55,172,0,0" VerticalAlignment="Top" GroupName="rbGroup" Checked="rb_Checked"/>
+        <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="53,199,0,0" VerticalAlignment="Top" GroupName="rbGroup" Checked="rb_Checked"/>
+        <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="53,228,0,0" VerticalAlignment="Top" GroupName="rbGroup" Checked="rb_Checked"/>
 
     </Grid>
 </Window>
