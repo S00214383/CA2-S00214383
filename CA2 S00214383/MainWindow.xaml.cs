@@ -37,15 +37,15 @@ namespace CA2_S00214383
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //create activities objects and properties
-            Activity trecking = new Activity() { Name = "Trekking", ActivityDate = new DateTime(2021, 6, 01), Cost = 40.90m, TypeOfActivity = ActivityType.Land};
-            Activity Kayaking = new Activity() { Name = "Kayaking", ActivityDate = new DateTime(2021, 6, 01), Cost = 69.90m, TypeOfActivity = ActivityType.Water };
-            Activity Parachuting = new Activity() { Name = "Parachuting", ActivityDate = new DateTime(2021, 6, 01), Cost = 149.90m, TypeOfActivity = ActivityType.Air };
-            Activity MountainBike = new Activity() { Name = "Mountain Bike", ActivityDate = new DateTime(2021, 6, 02), Cost = 99.90m, TypeOfActivity = ActivityType.Land};
-            Activity Surfing = new Activity() { Name = "Surfing", ActivityDate = new DateTime(2021, 6, 02), Cost = 59.90m, TypeOfActivity = ActivityType.Water };
-            Activity HangGliding = new Activity() { Name = "Hang Gliding", ActivityDate = new DateTime(2021, 6, 02), Cost = 149.90m, TypeOfActivity = ActivityType.Land };
-            Activity Abseling = new Activity() { Name = "Abseling", ActivityDate = new DateTime(2021, 6, 03), Cost = 79.90m, TypeOfActivity = ActivityType.Air };
-            Activity Sailing = new Activity() { Name = "Sailing", ActivityDate = new DateTime(2021, 6, 03), Cost = 219.90m, TypeOfActivity = ActivityType.Water };
-            Activity Helicopter = new Activity() { Name = "Helicopter Tour", ActivityDate = new DateTime(2021, 6, 03), Cost = 199.90m, TypeOfActivity = ActivityType.Air };
+            Activity trecking = new Activity() { Name = "Trekking", ActivityDate = new DateTime(2021, 6, 01), Cost = 40.90m, TypeOfActivity = ActivityType.Land, Description = "Amazing Trekking with a breathtaking view"};
+            Activity Kayaking = new Activity() { Name = "Kayaking", ActivityDate = new DateTime(2021, 6, 01), Cost = 69.90m, TypeOfActivity = ActivityType.Water, Description = "Get to discover the calm sea water in Sligo" };
+            Activity Parachuting = new Activity() { Name = "Parachuting", ActivityDate = new DateTime(2021, 6, 01), Cost = 149.90m, TypeOfActivity = ActivityType.Air, Description="An unforgettable adventure" };
+            Activity MountainBike = new Activity() { Name = "Mountain Bike", ActivityDate = new DateTime(2021, 6, 02), Cost = 99.90m, TypeOfActivity = ActivityType.Land, Description = "All materials included"};
+            Activity Surfing = new Activity() { Name = "Surfing", ActivityDate = new DateTime(2021, 6, 02), Cost = 59.90m, TypeOfActivity = ActivityType.Water, Description="Best waves in March" };
+            Activity HangGliding = new Activity() { Name = "Hang Gliding", ActivityDate = new DateTime(2021, 6, 02), Cost = 149.90m, TypeOfActivity = ActivityType.Land, Description="No experience needed" };
+            Activity Abseling = new Activity() { Name = "Abseling", ActivityDate = new DateTime(2021, 6, 03), Cost = 79.90m, TypeOfActivity = ActivityType.Air , Description = "1 hour or 30 min of adventure"};
+            Activity Sailing = new Activity() { Name = "Sailing", ActivityDate = new DateTime(2021, 6, 03), Cost = 219.90m, TypeOfActivity = ActivityType.Water , Description = "Up to 4 people"};
+            Activity Helicopter = new Activity() { Name = "Helicopter Tour", ActivityDate = new DateTime(2021, 6, 03), Cost = 199.90m, TypeOfActivity = ActivityType.Air, Description = "Discover the area from the sky" };
 
             //creating a collection
             atividades = new ObservableCollection<Activity>();

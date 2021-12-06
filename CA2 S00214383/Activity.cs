@@ -22,11 +22,7 @@ namespace CA2_S00214383
         public decimal Cost { get; set; }
 
         //object to display activities details plus cost
-        public string Description
-        {
-            get { return Description + Cost; }
-            set { Description = value; }
-        }
+        public string Description { get; set; }
 
         public ActivityType TypeOfActivity { get; set; }
 
@@ -49,7 +45,7 @@ namespace CA2_S00214383
         //method to output details and cost for each activity
         public string GetActivitiesDetails()
         {
-            return $"Activity: {Name} \nCost per person: {Cost:c}";
+            return $"{Name} - {Description} \nCost per person: {Cost:c}";
         }
 
         //method to calculate the total cost
