@@ -63,23 +63,47 @@ namespace CA2_S00214383
 
             //naming object property to output
             listBoxActivities.ItemsSource = atividades;   
+            
 
         }
 
         //this method checks the activity selected and add details
         private void listBoxActivities_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+          
             //determine what was selected
             Activity selectedActivity = listBoxActivities.SelectedItem as Activity;
-
+           
             //null check
+
             if (selectedActivity != null)
             {
                 //update display
                 tblkActivitiesDetails.Text = selectedActivity.GetActivitiesDetails();
             }
+
+           
             //take action - update display
         }
+
+        //method to output total cost
+        private void lbxActSelected_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //determine what was selected
+            Activity teste = lbxActSelected.SelectedItem as Activity;
+        
+
+            //null check
+            if (teste != null)
+            {                
+               tbkTotalCost.Text = teste.GetTotalCost().ToString();
+            }
+
+           
+            //take action - update display
+        }
+
+
 
         private void btnAddActivity_Click(object sender, RoutedEventArgs e)
         {
@@ -94,6 +118,10 @@ namespace CA2_S00214383
                 //add to the other
                 lbxActSelected.Items.Add(selected);
             }
+
+            //display item was not selected
+            else
+                MessageBox.Show("Please select an item");
         }
 
         //method to remove from second list and add to the first one
@@ -111,6 +139,9 @@ namespace CA2_S00214383
                 //add to the other (first list)
                 atividades.Add(selected2);
             }
+            //display item was not selected
+            else
+                MessageBox.Show("Please select an item");
         }
 
         //applying filter by TypeOfActivity property
@@ -167,5 +198,7 @@ namespace CA2_S00214383
                 listBoxActivities.ItemsSource = filteredActivities;
             }
         }
+
+        
     }
     }

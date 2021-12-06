@@ -52,7 +52,20 @@ namespace CA2_S00214383
             return $"Activity: {Name} \nCost per person: {Cost:c}";
         }
 
-
+        //method to calculate the total cost
+        public decimal GetTotalCost()
+        {
+           
+            decimal total = 0;
+            total = Cost + Cost;
+            return total;
+            //decimal sum = 0;
+            //for (int i = 0; i < listBox1.Items.Count; i++)
+            //{
+            //    sum += Convert.ToDecimal(listBox1.Items[i]);
+            //}
+            //label1.Text = "Sum all the Numbers : " + sum;
+        }
 
 
 

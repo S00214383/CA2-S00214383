@@ -14,12 +14,14 @@
         <Label x:Name="lbldescription" Content="Selected Activities" HorizontalAlignment="Left" Margin="524,95,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblDescription" Content="Description" HorizontalAlignment="Left" Margin="145,333,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnAddActivity" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="397,134,0,0" VerticalAlignment="Top" Width="75" Click="btnAddActivity_Click"/>
-        <ListBox x:Name="lbxActSelected" HorizontalAlignment="Left" Height="209" Margin="518,121,0,0" VerticalAlignment="Top" Width="193"/>
+        <ListBox x:Name="lbxActSelected" HorizontalAlignment="Left" Height="209" Margin="518,121,0,0" VerticalAlignment="Top" Width="193" SelectionChanged="lbxActSelected_SelectionChanged"/>
         <Button x:Name="btnRemoveActivity" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="397,184,0,0" VerticalAlignment="Top" Width="75" Click="btnRemoveActivity_Click"/>
         <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" Margin="53,142,0,0" VerticalAlignment="Top" Checked="rb_Checked" GroupName="rbGroup"/>
         <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="55,172,0,0" VerticalAlignment="Top" GroupName="rbGroup" Checked="rb_Checked"/>
         <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="53,199,0,0" VerticalAlignment="Top" GroupName="rbGroup" Checked="rb_Checked"/>
         <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="53,228,0,0" VerticalAlignment="Top" GroupName="rbGroup" Checked="rb_Checked"/>
+        <Label x:Name="lblTotalCost" Content="Total Cost:" HorizontalAlignment="Left" Margin="524,55,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tbkTotalCost" HorizontalAlignment="Left" Margin="611,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77"/>
 
     </Grid>
 </Window>
