@@ -27,21 +27,6 @@ namespace CA2_S00214383
         public ActivityType TypeOfActivity { get; set; }
 
 
-        //public class TypeOfActivity
-        //{
-        //    private TypeOfActivity activity;
-
-        //    public void SetActivity(TypeOfActivity value)
-        //    {
-        //        activity = value;
-        //    }
-
-        //    public TypeOfActivity GetActivity()
-        //    {
-        //        return activity;
-        //    }
-        //}
-
         //method to output details and cost for each activity
         public string GetActivitiesDetails()
         {
@@ -51,9 +36,10 @@ namespace CA2_S00214383
         //method to calculate the total cost
         public decimal GetTotalCost()
         {
-           
+
             decimal total = 0;
-            total = Cost + Cost;
+           
+            total += Cost ;
             return total;
             //decimal sum = 0;
             //for (int i = 0; i < listBox1.Items.Count; i++)

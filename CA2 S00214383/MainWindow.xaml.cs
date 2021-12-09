@@ -28,6 +28,7 @@ namespace CA2_S00214383
         ObservableCollection<Activity> atividades;
         ObservableCollection<Activity> filteredActivities = new ObservableCollection<Activity>();
         ObservableCollection<Activity> selectedActivities = new ObservableCollection<Activity>();
+        decimal total = 0;
 
         public MainWindow()
         {
@@ -73,6 +74,7 @@ namespace CA2_S00214383
           
             //determine what was selected
             Activity selectedActivity = listBoxActivities.SelectedItem as Activity;
+            
            
             //null check
 
@@ -86,38 +88,46 @@ namespace CA2_S00214383
             //take action - update display
         }
 
+
         //method to output total cost
         private void lbxActSelected_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //determine what was selected
-            Activity teste = lbxActSelected.SelectedItem as Activity;
-        
 
-            //null check
-            if (teste != null)
-            {                
-               tbkTotalCost.Text = teste.GetTotalCost().ToString();
-            }
 
-           
-            //take action - update display
+            //Activity teste = lbxActSelected.SelectedItem as Activity;
+
+            ////null check
+            //if (teste != null)
+            //{
+            //    tbkTotalCost.Text = teste.GetTotalCost().ToString();
+            //}
         }
-
 
 
         private void btnAddActivity_Click(object sender, RoutedEventArgs e)
         {
             Activity selected = listBoxActivities.SelectedItem as Activity;
 
+          
+            
+           
             //check not null
             if (selected != null)
             {
+
+                
                 //remove from one list
                 atividades.Remove(selected);
 
                 //add to the other
                 lbxActSelected.Items.Add(selected);
+
+                //code to add the total cost, global variable declared
+                total += selected.Cost;
+                tbkTotalCost.Text = total.ToString();
+
             }
+            
 
             //display item was not selected
             else
@@ -138,6 +148,11 @@ namespace CA2_S00214383
 
                 //add to the other (first list)
                 atividades.Add(selected2);
+
+                //code to remove from the total cost if activity is removed from second list
+                total -= selected2.Cost;
+                tbkTotalCost.Text = total.ToString();
+
             }
             //display item was not selected
             else
@@ -199,6 +214,9 @@ namespace CA2_S00214383
             }
         }
 
-        
+        private void Add_total_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
     }
